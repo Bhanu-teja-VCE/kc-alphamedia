@@ -19,12 +19,13 @@ export default function StatsBar() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="flex flex-col items-center justify-center text-center px-4"
+              whileHover={{ scale: 1.05 }}
+              className="flex flex-col items-center justify-center text-center px-4 cursor-default group"
             >
-              <span className="text-4xl md:text-5xl font-black font-display text-white mb-2 tracking-tighter">
+              <span className="text-4xl md:text-5xl font-black font-display text-white mb-2 tracking-tighter group-hover:text-accent transition-colors">
                 {stat.value}
               </span>
-              <span className="text-xs md:text-sm font-bold tracking-widest text-accent uppercase">
+              <span className="text-xs md:text-sm font-bold tracking-widest text-accent uppercase group-hover:text-white transition-colors">
                 {stat.label}
               </span>
             </motion.div>

@@ -1,5 +1,6 @@
-import { motion } from 'motion/react';
-import { Quote } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'motion/react';
+import { Quote, ChevronLeft, ChevronRight } from 'lucide-react';
 
 const testimonials = [
   { text: "KCALPHAMEDIA turned our social presence into a 24/7 lead machine.", author: "Rajesh K." },
@@ -20,6 +21,23 @@ const testimonials = [
 ];
 
 export default function ProofOfWork() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % testimonials.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, []);
+
+  const nextSlide = () => {
+    setCurrentIndex((prev) => (prev + 1) % testimonials.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+  };
+
   return (
     <section id="proof" className="py-32 px-6 bg-background relative border-t border-white/5 overflow-hidden">
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-accent/10 blur-[120px] rounded-full pointer-events-none" />
@@ -47,57 +65,75 @@ export default function ProofOfWork() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="glass p-8 rounded-2xl flex flex-col items-center justify-center text-center"
+            whileHover={{ scale: 1.05 }}
+            className="glass p-8 rounded-2xl flex flex-col items-center justify-center text-center group cursor-default"
           >
-            <span className="text-6xl font-black font-display text-white mb-2 tracking-tighter">340%</span>
-            <span className="text-sm font-bold tracking-widest text-accent uppercase">AVG ROAS FOR D2C PARTNERS</span>
+            <span className="text-6xl font-black font-display text-white mb-2 tracking-tighter group-hover:text-accent transition-colors">340%</span>
+            <span className="text-sm font-bold tracking-widest text-accent uppercase group-hover:text-white transition-colors">AVG ROAS FOR D2C PARTNERS</span>
           </motion.div>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="glass p-8 rounded-2xl flex flex-col items-center justify-center text-center"
+            whileHover={{ scale: 1.05 }}
+            className="glass p-8 rounded-2xl flex flex-col items-center justify-center text-center group cursor-default"
           >
-            <span className="text-6xl font-black font-display text-white mb-2 tracking-tighter">12K+</span>
-            <span className="text-sm font-bold tracking-widest text-accent uppercase">PRE-QUALIFIED REAL ESTATE LEADS</span>
+            <span className="text-6xl font-black font-display text-white mb-2 tracking-tighter group-hover:text-accent transition-colors">12K+</span>
+            <span className="text-sm font-bold tracking-widest text-accent uppercase group-hover:text-white transition-colors">PRE-QUALIFIED REAL ESTATE LEADS</span>
           </motion.div>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="glass p-8 rounded-2xl flex flex-col items-center justify-center text-center"
+            whileHover={{ scale: 1.05 }}
+            className="glass p-8 rounded-2xl flex flex-col items-center justify-center text-center group cursor-default"
           >
-            <span className="text-6xl font-black font-display text-white mb-2 tracking-tighter">MoM</span>
-            <span className="text-sm font-bold tracking-widest text-accent uppercase">GROWTH: Jan, Mar, May, Jul, Sep, Nov</span>
+            <span className="text-6xl font-black font-display text-white mb-2 tracking-tighter group-hover:text-accent transition-colors">MoM</span>
+            <span className="text-sm font-bold tracking-widest text-accent uppercase group-hover:text-white transition-colors">GROWTH: Jan, Mar, May, Jul, Sep, Nov</span>
           </motion.div>
         </div>
 
-        <div className="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
-          {testimonials.map((testimonial, index) => (
+        <div className="relative max-w-4xl mx-auto mt-20">
+          <AnimatePresence mode="wait">
             <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.05 }}
-              className="glass p-8 rounded-2xl break-inside-avoid hover:bg-white/10 transition-colors"
+              key={currentIndex}
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -50 }}
+              transition={{ duration: 0.5 }}
+              className="glass p-12 rounded-2xl flex flex-col items-center text-center"
             >
-              <Quote className="w-8 h-8 text-accent/50 mb-4" />
-              <p className="text-lg text-gray-300 font-light leading-relaxed mb-6 italic">
-                "{testimonial.text}"
+              <Quote className="w-12 h-12 text-accent/50 mb-8" />
+              <p className="text-2xl md:text-3xl text-gray-300 font-light leading-relaxed mb-10 italic">
+                "{testimonials[currentIndex].text}"
               </p>
-              <div className="flex items-center gap-3">
-                <div className="w-8 h-8 rounded-full bg-gradient-to-br from-accent to-accent-dark flex items-center justify-center text-black font-bold text-sm">
-                  {testimonial.author.charAt(0)}
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-accent to-accent-dark flex items-center justify-center text-black font-bold text-xl">
+                  {testimonials[currentIndex].author.charAt(0)}
                 </div>
-                <span className="text-white font-medium tracking-wide uppercase text-sm">
-                  — {testimonial.author}
+                <span className="text-white font-medium tracking-wide uppercase text-lg">
+                  — {testimonials[currentIndex].author}
                 </span>
               </div>
             </motion.div>
-          ))}
+          </AnimatePresence>
+
+          <div className="flex justify-center gap-4 mt-8">
+            <button 
+              onClick={prevSlide}
+              className="w-12 h-12 rounded-full glass flex items-center justify-center hover:bg-white/10 hover:text-accent transition-colors"
+            >
+              <ChevronLeft className="w-6 h-6" />
+            </button>
+            <button 
+              onClick={nextSlide}
+              className="w-12 h-12 rounded-full glass flex items-center justify-center hover:bg-white/10 hover:text-accent transition-colors"
+            >
+              <ChevronRight className="w-6 h-6" />
+            </button>
+          </div>
         </div>
       </div>
     </section>
