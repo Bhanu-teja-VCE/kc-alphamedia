@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+
+  --color-background: #030303;
+  --color-surface: #0a0a0a;
+  --color-surface-hover: #141414;
+  --color-border: #1f1f1f;
+  
+  --color-accent: #00E5FF; /* Neon Cyan */
+  --color-accent-dark: #007BFF; /* Electric Blue */
+  --color-gold: #D4AF37; /* Subtle Gold */
+
+  --animate-marquee: marquee 30s linear infinite;
+}
+
+@layer base {
+  body {
+    @apply bg-background text-white font-sans antialiased selection:bg-accent selection:text-black;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display tracking-tight;
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-white/5 backdrop-blur-md border border-white/10;
+  }
+  
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-accent to-accent-dark;
+  }
+  
+  .text-gradient-gold {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-gold to-yellow-200;
+  }
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+html {
+  scroll-behavior: smooth;
+}
