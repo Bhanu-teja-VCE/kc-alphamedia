@@ -42,7 +42,7 @@ export default function Advantage() {
               className={`glass p-8 rounded-2xl flex flex-col gap-6 group hover:bg-white/10 transition-colors ${index === 6 ? 'lg:col-span-3 md:col-span-2' : ''}`}
             >
               <div className="flex items-center justify-between mb-4">
-                <div className="p-3 bg-black/50 rounded-xl border border-white/5">
+                <div className="p-3 bg-surface border-border rounded-xl border border-white/5">
                   {adv.icon}
                 </div>
                 <span className="text-4xl font-black font-display text-white/10 group-hover:text-accent/20 transition-colors">
@@ -54,7 +54,7 @@ export default function Advantage() {
                 <h3 className="text-xl font-bold tracking-tight text-white mb-3 uppercase">
                   {adv.title}
                 </h3>
-                <p className="text-gray-400 font-light leading-relaxed">
+                <p className="text-text-secondary font-light leading-relaxed">
                   {adv.desc}
                 </p>
               </div>

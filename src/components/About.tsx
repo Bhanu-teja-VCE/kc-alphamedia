@@ -18,7 +18,7 @@ export default function About() {
             <span className="text-gradient">GROWTH FIRM.</span>
           </h2>
           
-          <div className="space-y-6 text-lg md:text-xl text-gray-400 font-light leading-relaxed">
+          <div className="space-y-6 text-lg md:text-xl text-text-secondary font-light leading-relaxed">
             <p>
               <strong className="text-white font-medium">KCALPHAMEDIA</strong> isn't an agency — it's a revenue engineering institution. Built over a decade of relentless iteration, we operate 19 AI-specialized departments that automate, optimize, and scale revenue for our clients 24/7.
             </p>

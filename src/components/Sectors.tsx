@@ -71,13 +71,13 @@ export default function Sectors() {
             >
               <div className="absolute inset-0 bg-gradient-to-br from-accent/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
               <div className="relative z-10">
-                <div className="mb-6 p-4 bg-black/50 rounded-xl inline-block border border-white/5">
+                <div className="mb-6 p-4 bg-surface border-border rounded-xl inline-block border border-white/5">
                   {sector.icon}
                 </div>
                 <h3 className="text-2xl font-bold tracking-tight mb-2 text-white">
                   {sector.title}
                 </h3>
-                <p className="text-gray-400 font-light leading-relaxed">
+                <p className="text-text-secondary font-light leading-relaxed">
                   {sector.desc}
                 </p>
               </div>

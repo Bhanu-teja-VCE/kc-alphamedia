@@ -12,7 +12,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass mb-8 text-sm font-medium tracking-widest uppercase text-gray-300"
+          className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass mb-8 text-sm font-medium tracking-widest uppercase text-text-secondary"
         >
           <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
           10 YEARS OF DOMINANCE · ₹50Cr+ AD SPEND MANAGED
@@ -32,7 +32,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
-          className="text-xl md:text-2xl text-gray-400 font-light max-w-3xl mb-12"
+          className="text-xl md:text-2xl text-text-secondary font-light max-w-3xl mb-12"
         >
           THE ALPHA STANDARD IN DIGITAL GROWTH.
           <br className="hidden md:block" />
@@ -71,7 +71,7 @@ export default function Hero() {
         transition={{ delay: 1.5, duration: 1 }}
         className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce"
       >
-        <ChevronDown className="w-6 h-6 text-gray-500" />
+        <ChevronDown className="w-6 h-6 text-text-secondary" />
       </motion.div>
     </section>
   );

@@ -51,7 +51,7 @@ export default function FAQ() {
             >
               <button
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                className="w-full px-8 py-6 flex items-center justify-between text-left hover:bg-white/5 transition-colors"
+                className="w-full px-8 py-6 flex items-center justify-between text-left hover:bg-surface hover:bg-surface-hover border-border transition-colors"
               >
                 <span className="text-lg md:text-xl font-bold tracking-tight text-white pr-8">
                   {faq}
@@ -70,7 +70,7 @@ export default function FAQ() {
                     transition={{ duration: 0.3 }}
                     className="overflow-hidden"
                   >
-                    <div className="px-8 pb-6 pt-2 text-gray-400 font-light leading-relaxed">
+                    <div className="px-8 pb-6 pt-2 text-text-secondary font-light leading-relaxed">
                       <p>
                         This is a placeholder answer. In a real implementation, this would contain the specific answer to the question "{faq}". Our 10 years of experience and AI-first approach ensure we have the precise systems and data to address this effectively.
                       </p>

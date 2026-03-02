@@ -21,7 +21,7 @@ export default function Footer() {
               BOOK A <br />
               <span className="text-gradient">REVENUE AUDIT.</span>
             </h2>
-            <p className="text-xl text-gray-400 font-light leading-relaxed mb-12 max-w-md">
+            <p className="text-xl text-text-secondary font-light leading-relaxed mb-12 max-w-md">
               30 minutes. Zero fluff. We'll audit your current growth stack and show you exactly where revenue is leaking.
             </p>
             
@@ -36,10 +36,10 @@ export default function Footer() {
               </div>
               
               <form className="space-y-4 max-w-md">
-                <input type="text" placeholder="NAME" className="w-full bg-white/5 border border-white/10 rounded-sm px-6 py-4 text-white placeholder-gray-500 focus:outline-none focus:border-accent transition-colors font-mono uppercase text-sm tracking-widest" />
-                <input type="email" placeholder="EMAIL" className="w-full bg-white/5 border border-white/10 rounded-sm px-6 py-4 text-white placeholder-gray-500 focus:outline-none focus:border-accent transition-colors font-mono uppercase text-sm tracking-widest" />
-                <input type="tel" placeholder="PHONE" className="w-full bg-white/5 border border-white/10 rounded-sm px-6 py-4 text-white placeholder-gray-500 focus:outline-none focus:border-accent transition-colors font-mono uppercase text-sm tracking-widest" />
-                <select defaultValue="" className="w-full bg-white/5 border border-white/10 rounded-sm px-6 py-4 text-gray-500 focus:outline-none focus:border-accent transition-colors font-mono uppercase text-sm tracking-widest appearance-none">
+                <input type="text" placeholder="NAME" className="w-full bg-surface hover:bg-surface-hover border-border border border-white/10 rounded-sm px-6 py-4 text-white placeholder-gray-500 focus:outline-none focus:border-accent transition-colors font-mono uppercase text-sm tracking-widest" />
+                <input type="email" placeholder="EMAIL" className="w-full bg-surface hover:bg-surface-hover border-border border border-white/10 rounded-sm px-6 py-4 text-white placeholder-gray-500 focus:outline-none focus:border-accent transition-colors font-mono uppercase text-sm tracking-widest" />
+                <input type="tel" placeholder="PHONE" className="w-full bg-surface hover:bg-surface-hover border-border border border-white/10 rounded-sm px-6 py-4 text-white placeholder-gray-500 focus:outline-none focus:border-accent transition-colors font-mono uppercase text-sm tracking-widest" />
+                <select defaultValue="" className="w-full bg-surface hover:bg-surface-hover border-border border border-white/10 rounded-sm px-6 py-4 text-text-secondary focus:outline-none focus:border-accent transition-colors font-mono uppercase text-sm tracking-widest appearance-none">
                   <option value="" disabled>MONTHLY BUDGET</option>
                   <option value="10k-50k">₹10L - ₹50L</option>
                   <option value="50k-100k">₹50L - ₹1Cr</option>
@@ -72,7 +72,7 @@ export default function Footer() {
                   </div>
                   <span className="font-display font-black tracking-widest text-2xl text-white">KCALPHAMEDIA</span>
                 </div>
-                <p className="text-gray-400 font-light text-sm tracking-widest uppercase mb-2">
+                <p className="text-text-secondary font-light text-sm tracking-widest uppercase mb-2">
                   FOUNDED BY KODATI HARSHA VARDHAN & CHEPYALA VISHAL
                 </p>
                 <p className="text-accent font-bold text-sm tracking-widest uppercase">
@@ -83,13 +83,13 @@ export default function Footer() {
               <div className="w-full h-px bg-white/10" />
               
               <div className="space-y-4">
-                <a href="mailto:harshakodati@kcalphamedia.com" className="block text-gray-300 hover:text-accent transition-colors font-mono text-sm tracking-wider">
+                <a href="mailto:harshakodati@kcalphamedia.com" className="block text-text-secondary hover:text-accent transition-colors font-mono text-sm tracking-wider">
                   harshakodati@kcalphamedia.com
                 </a>
-                <a href="mailto:vishal.chepyala@kcalphamedia.com" className="block text-gray-300 hover:text-accent transition-colors font-mono text-sm tracking-wider">
+                <a href="mailto:vishal.chepyala@kcalphamedia.com" className="block text-text-secondary hover:text-accent transition-colors font-mono text-sm tracking-wider">
                   vishal.chepyala@kcalphamedia.com
                 </a>
-                <p className="text-gray-300 font-mono text-sm tracking-wider">
+                <p className="text-text-secondary font-mono text-sm tracking-wider">
                   +91 8125692258 | +91 6305732069
                 </p>
               </div>
@@ -97,26 +97,26 @@ export default function Footer() {
               <div className="w-full h-px bg-white/10" />
               
               <div className="flex gap-6">
-                <a href="#" className="text-gray-400 hover:text-accent transition-colors">
+                <a href="#" className="text-text-secondary hover:text-accent transition-colors">
                   <Facebook className="w-6 h-6" />
                 </a>
-                <a href="#" className="text-gray-400 hover:text-accent transition-colors">
+                <a href="#" className="text-text-secondary hover:text-accent transition-colors">
                   <Instagram className="w-6 h-6" />
                 </a>
-                <a href="#" className="text-gray-400 hover:text-accent transition-colors">
+                <a href="#" className="text-text-secondary hover:text-accent transition-colors">
                   <Twitter className="w-6 h-6" />
                 </a>
               </div>
               
               <div className="mt-8">
-                <p className="text-gray-500 font-bold text-xs tracking-[0.2em] uppercase">
+                <p className="text-text-secondary font-bold text-xs tracking-[0.2em] uppercase">
                   TELANGANA, INDIA · GLOBAL AGENCY
                 </p>
               </div>
             </div>
             
             <div className="mt-12 text-center lg:text-right">
-              <p className="text-gray-600 font-bold text-xs tracking-[0.2em] uppercase">
+              <p className="text-text-secondary font-bold text-xs tracking-[0.2em] uppercase">
                 © 2026 KCALPHAMEDIA. BUILT FOR SCALE.
               </p>
             </div>

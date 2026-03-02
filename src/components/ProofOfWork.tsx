@@ -106,7 +106,7 @@ export default function ProofOfWork() {
               className="glass p-12 rounded-2xl flex flex-col items-center text-center"
             >
               <Quote className="w-12 h-12 text-accent/50 mb-8" />
-              <p className="text-2xl md:text-3xl text-gray-300 font-light leading-relaxed mb-10 italic">
+              <p className="text-2xl md:text-3xl text-text-secondary font-light leading-relaxed mb-10 italic">
                 "{testimonials[currentIndex].text}"
               </p>
               <div className="flex items-center gap-4">

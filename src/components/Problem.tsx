@@ -64,11 +64,11 @@ export default function Problem() {
               </div>
               
               <div className="space-y-4">
-                <p className="text-xl text-gray-300 font-medium italic">
+                <p className="text-xl text-text-secondary font-medium italic">
                   "{item.problem}"
                 </p>
                 <div className="w-8 h-px bg-red-500/50" />
-                <p className="text-gray-400 font-light leading-relaxed">
+                <p className="text-text-secondary font-light leading-relaxed">
                   <strong className="text-white font-medium">Solution:</strong> {item.solution}
                 </p>
               </div>

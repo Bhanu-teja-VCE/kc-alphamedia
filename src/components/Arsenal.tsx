@@ -56,7 +56,7 @@ export default function Arsenal() {
 
         <div className="mb-12 space-y-6">
           <div>
-            <span className="text-xs font-bold text-gray-500 uppercase tracking-widest mb-3 block">Filter by Category</span>
+            <span className="text-xs font-bold text-text-secondary uppercase tracking-widest mb-3 block">Filter by Category</span>
             <div className="flex flex-wrap gap-2">
               {categories.map(cat => (
                 <button
@@ -65,7 +65,7 @@ export default function Arsenal() {
                   className={`px-4 py-2 rounded-full text-xs font-bold tracking-widest uppercase transition-colors ${
                     activeCategory === cat 
                       ? 'bg-accent text-black' 
-                      : 'bg-white/5 text-gray-400 hover:bg-white/10 hover:text-white'
+                      : 'bg-surface hover:bg-surface-hover border-border text-text-secondary hover:bg-white/10 hover:text-white'
                   }`}
                 >
                   {cat}
@@ -75,7 +75,7 @@ export default function Arsenal() {
           </div>
           
           <div>
-            <span className="text-xs font-bold text-gray-500 uppercase tracking-widest mb-3 block">Filter by Industry</span>
+            <span className="text-xs font-bold text-text-secondary uppercase tracking-widest mb-3 block">Filter by Industry</span>
             <div className="flex flex-wrap gap-2">
               {industries.map(ind => (
                 <button
@@ -84,7 +84,7 @@ export default function Arsenal() {
                   className={`px-4 py-2 rounded-full text-xs font-bold tracking-widest uppercase transition-colors ${
                     activeIndustry === ind 
                       ? 'bg-accent-dark text-white' 
-                      : 'bg-white/5 text-gray-400 hover:bg-white/10 hover:text-white'
+                      : 'bg-surface hover:bg-surface-hover border-border text-text-secondary hover:bg-white/10 hover:text-white'
                   }`}
                 >
                   {ind}
@@ -114,11 +114,11 @@ export default function Arsenal() {
                 <h3 className="text-xl font-bold tracking-tight text-white mb-3 uppercase relative z-10">
                   {service.title}
                 </h3>
-                <p className="text-gray-400 font-light leading-relaxed text-sm relative z-10">
+                <p className="text-text-secondary font-light leading-relaxed text-sm relative z-10">
                   {service.desc}
                 </p>
                 <div className="mt-4 flex flex-wrap gap-2 relative z-10">
-                  <span className="text-[10px] px-2 py-1 rounded-sm bg-white/5 text-gray-400 uppercase tracking-widest font-bold">
+                  <span className="text-[10px] px-2 py-1 rounded-sm bg-surface hover:bg-surface-hover border-border text-text-secondary uppercase tracking-widest font-bold">
                     {service.category}
                   </span>
                 </div>
@@ -131,7 +131,7 @@ export default function Arsenal() {
           <motion.div 
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            className="text-center py-20 text-gray-500 font-mono text-sm tracking-widest uppercase"
+            className="text-center py-20 text-text-secondary font-mono text-sm tracking-widest uppercase"
           >
             No services found for the selected filters.
           </motion.div>
